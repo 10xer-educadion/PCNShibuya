@@ -1,19 +1,19 @@
 import type { TemplateConfig } from "./configType";
 
 const templateConfig: TemplateConfig = {
-  name: "Lorem Ipsum",
+  name: "ロレム・イプサム",
   seo: {
-    title: "Mobile App Landing Template",
-    description: "Mobile App Landing Template",
+    title: "モバイルアプリランディングテンプレート",
+    description: "モバイルアプリランディングテンプレート",
   },
-  // Draws grid behind main container
+  // メインコンテナの背後にグリッドを描画
   backgroundGrid: false,
   logo: "/logo.svg",
   theme: "corporate",
-  // Forces theme to be chosen above, no matter what user prefers
-  forceTheme: false,
-  // Shows switch to toggle between dark and light modes
-  showThemeSwitch: true,
+  // ユーザーの設定に関係なくテーマを強制的に選択
+  forceTheme: true,
+  // ダークモードとライトモードの切り替えスイッチを表示
+  showThemeSwitch: false,
   appStoreLink: "https://apps.apple.com/us/app/google/id284815942",
   googlePlayLink:
     "https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox",
@@ -29,29 +29,29 @@ const templateConfig: TemplateConfig = {
       twitter: "https://x.com/google",
     },
     links: [
-      { href: "/#features", title: "Features" },
-      { href: "/#how-it-works", title: "How it works" },
-      { href: "/#pricing", title: "Pricing" },
-      { href: "/#faq", title: "FAQ" },
+      { href: "/#features", title: "機能" },
+      { href: "/#how-it-works", title: "使い方" },
+      { href: "/#pricing", title: "料金" },
+      { href: "/#faq", title: "よくある質問" },
     ],
   },
   topNavbar: {
-    cta: "Get the app",
+    cta: "アプリを入手",
     disableWidthAnimation: false,
     hideAppStore: false,
     hideGooglePlay: false,
     links: [
-      { href: "/#features", title: "Features" },
-      { href: "/#how-it-works", title: "How it works" },
-      { href: "/#pricing", title: "Pricing" },
-      { href: "/#faq", title: "FAQ" },
+      { href: "/#features", title: "機能" },
+      { href: "/#how-it-works", title: "使い方" },
+      { href: "/#pricing", title: "料金" },
+      { href: "/#faq", title: "よくある質問" },
     ],
   },
   appBanner: {
     id: "app-banner",
-    title: "Download Our Mobile App Today!",
+    title: "今すぐモバイルアプリをダウンロード！",
     subtitle:
-      "Unlock the full potential of our services with seamless access at your fingertips. Stay connected, informed, and in control wherever you are.",
+      "シームレスなアクセスでサービスの全機能を手に入れましょう。どこにいてもつながり、情報を得て、コントロールできます。",
     screenshots: [
       "/screenshots/1.webp",
       "/screenshots/2.webp",
@@ -65,33 +65,33 @@ const templateConfig: TemplateConfig = {
     },
     testimonials: {
       id: "testimonials",
-      title: "Testimonials",
-      subtitle: "Check out a few of our customer stories",
+      title: "お客様の声",
+      subtitle: "お客様のストーリーをご覧ください",
       cards: [
         {
-          name: "Alice Johnson",
+          name: "アリス・ジョンソン",
           comment:
-            "The service was fantastic! Highly recommended. The team was very professional and attentive to our needs. They went above and beyond to ensure we were satisfied with the results. I will definitely be using their services again in the future.",
+            "サービスは素晴らしかったです！非常におすすめします。チームはとてもプロフェッショナルで、私たちのニーズに細かく対応してくれました。結果に満足できるように全力を尽くしてくれました。今後もぜひ利用したいと思います。",
         },
         {
-          name: "Bob Smith",
+          name: "ボブ・スミス",
           comment:
-            "Great value for the price. Very satisfied with the overall experience. The product quality is top-notch and the customer service is excellent. I appreciate the prompt responses to my inquiries and the helpful advice provided. Highly recommend.",
+            "価格に見合った価値があります。全体的な体験に非常に満足しています。製品の品質は最高で、カスタマーサービスも素晴らしいです。問い合わせに迅速に対応してくれ、役立つアドバイスもいただきました。強くおすすめします。",
         },
         {
-          name: "Charlie Brown",
+          name: "チャーリー・ブラウン",
           comment:
-            "An excellent experience from start to finish. The onboarding process was smooth and the support team was very responsive. I felt valued as a customer and the results exceeded my expectations. I am impressed with the level of detail and care put into their work.",
+            "最初から最後まで素晴らしい体験でした。オンボーディングプロセスはスムーズで、サポートチームも非常に対応が良かったです。顧客として大切にされていると感じ、結果は期待以上でした。細部までの配慮とケアに感動しました。",
         },
         {
-          name: "Dana White",
+          name: "ダナ・ホワイト",
           comment:
-            "Superb customer service and high-quality products. The team demonstrated great expertise and patience throughout the project. They addressed all my concerns and provided valuable insights. The end product was delivered on time and surpassed my expectations.",
+            "優れたカスタマーサービスと高品質な製品。チームはプロジェクト全体を通じて高い専門知識と忍耐力を示しました。すべての懸念に対応し、貴重な洞察を提供してくれました。最終製品は予定通りに納品され、期待を超えました。",
         },
         {
-          name: "Eve Adams",
+          name: "イヴ・アダムス",
           comment:
-            "I couldn't be happier with the results! The attention to detail and the level of customization provided was outstanding. The team was friendly and professional, making the entire process enjoyable. I highly recommend their services to anyone looking for top-quality work.",
+            "結果にこれ以上ないほど満足しています！細部へのこだわりとカスタマイズのレベルは素晴らしかったです。チームは親切でプロフェッショナルで、全体のプロセスが楽しいものでした。最高品質の仕事を求める方に強くおすすめします。",
         },
       ],
     },
@@ -106,149 +106,149 @@ const templateConfig: TemplateConfig = {
     },
     howItWorks: {
       id: "how-it-works",
-      title: "How it works",
+      title: "使い方",
       subtitle:
-        "Explore our comprehensive step-by-step guide to understand how our process ensures seamless and effective results",
+        "当社のプロセスがシームレスで効果的な結果を保証する方法を段階的にご案内します",
       steps: [
         {
-          title: "Install the App",
+          title: "アプリをインストール",
           subtitle:
-            "Download and install the app on your device to get started quickly and easily.",
+            "デバイスにアプリをダウンロードしてインストールし、すぐに簡単に始めましょう。",
           image: "/stock/01.webp",
         },
         {
-          title: "Create an Account",
+          title: "アカウントを作成",
           subtitle:
-            "Sign up by entering your personal details and verifying your email to create a new account in just a few minutes.",
+            "個人情報を入力し、メールを確認して数分で新しいアカウントを作成します。",
           image: "/stock/02.webp",
         },
         {
-          title: "Set Up Your Profile",
+          title: "プロフィールを設定",
           subtitle:
-            "Complete your profile by adding necessary information and preferences to personalize your experience on the platform.",
+            "必要な情報や設定を追加して、プラットフォームでの体験をパーソナライズします。",
           image: "/stock/03.webp",
         },
         {
-          title: "Explore Features",
+          title: "機能を探索",
           subtitle:
-            "Navigate through the app to discover various features and tools designed to enhance your productivity and engagement.",
+            "アプリ内をナビゲートして、生産性とエンゲージメントを高めるさまざまな機能やツールを発見しましょう。",
           image: "/stock/04.webp",
         },
         {
-          title: "Connect with Others",
+          title: "他のユーザーとつながる",
           subtitle:
-            "Start connecting with friends, colleagues, and like-minded individuals to expand your network and collaborate efficiently.",
+            "友人や同僚、同じ志を持つ人々とつながり、ネットワークを広げて効率的に協力しましょう。",
           image: "/stock/05.webp",
         },
       ],
     },
     features: {
       id: "features",
-      title: "Transform Your Daily Routine",
+      title: "日常を変革する",
       subtitle:
-        "Elevate your lifestyle with our innovative mobile app, designed for seamless living",
+        "シームレスな生活のために設計された革新的なモバイルアプリでライフスタイルを向上させましょう",
       cards: [
         {
-          title: "Seamless Integration",
+          title: "シームレスな統合",
           subtitle:
-            "Connect effortlessly with all your devices, ensuring smooth and efficient workflows across different platforms and applications without any disruptions",
+            "すべてのデバイスと簡単に接続し、さまざまなプラットフォームやアプリケーション間でスムーズかつ効率的なワークフローを実現します。",
           icon: "/3D/link-front-color.webp",
         },
         {
-          title: "24/7 Customer Support",
+          title: "24時間365日のカスタマーサポート",
           subtitle:
-            "Get assistance whenever you need it with our dedicated customer support team, available around the clock to help resolve any issues you may encounter",
+            "専任のカスタマーサポートチームがいつでもサポートし、問題解決をお手伝いします。",
           icon: "/3D/clock-front-color.webp",
         },
         {
-          title: "Intuitive Design",
+          title: "直感的なデザイン",
           subtitle:
-            "Navigate through our intuitive and easy-to-use interface designed to enhance user experience, making it accessible for users of all skill levels",
+            "使いやすく直感的なインターフェースで、あらゆるスキルレベルのユーザーに対応します。",
           icon: "/3D/roll-brush-front-color.webp",
         },
         {
-          title: "Top-Notch Security",
+          title: "最高水準のセキュリティ",
           subtitle:
-            "Protect your data with our top-notch security protocols, offering robust encryption and real-time monitoring to keep your information safe and secure",
+            "強力な暗号化とリアルタイム監視でデータを保護し、安全を確保します。",
           icon: "/3D/sheild-front-color.webp",
         },
       ],
     },
     faq: {
       id: "faq",
-      title: "Frequently Asked Questions",
+      title: "よくある質問",
       qa: [
         {
-          question: "How can I create an account on your website?",
+          question: "ウェブサイトでアカウントを作成するにはどうすればよいですか？",
           answer:
-            "To create an account, click on the 'Sign Up' button located at the top right corner of our homepage. Fill in the required information, including your name, email address, and password. Once you submit the form, you will receive a confirmation email. Click the link in the email to verify your account, and you're all set!",
+            "アカウントを作成するには、ホームページ右上の「サインアップ」ボタンをクリックしてください。名前、メールアドレス、パスワードなど必要な情報を入力します。フォームを送信すると確認メールが届きます。メール内のリンクをクリックしてアカウントを認証すれば完了です。",
         },
         {
-          question: "What payment methods do you accept?",
+          question: "どのような支払い方法が利用できますか？",
           answer:
-            "We accept a variety of payment methods to ensure convenience for our customers. These include major credit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, and Google Pay. For more details, visit our Payments page.",
+            "お客様の利便性のために、主要なクレジットカード（Visa、MasterCard、American Express）、PayPal、Apple Pay、Google Payなど、さまざまな支払い方法に対応しています。詳細は支払いページをご覧ください。",
         },
         {
-          question: "How can I track my order?",
+          question: "注文の追跡はどうすればよいですか？",
           answer:
-            "Once your order is shipped, you will receive an email with a tracking number. You can use this tracking number on our website under the 'Track Order' section to see the current status and estimated delivery date of your package.",
+            "注文が発送されると、追跡番号が記載されたメールが届きます。ウェブサイトの「注文追跡」セクションでこの番号を入力すると、現在の状況と配達予定日を確認できます。",
         },
         {
-          question: "What is your return policy?",
+          question: "返品ポリシーはどうなっていますか？",
           answer:
-            "We offer a 30-day return policy for unused and unopened items. If you are not satisfied with your purchase, please contact our customer support team to initiate a return. Refunds will be processed within 7-10 business days after we receive the returned item.",
+            "未使用かつ未開封の商品に限り、30日間の返品ポリシーを提供しています。購入に満足いただけない場合は、カスタマーサポートまでご連絡ください。返品商品を受領後、7〜10営業日以内に返金処理を行います。",
         },
         {
-          question: "How can I contact customer support?",
+          question: "カスタマーサポートへの連絡方法は？",
           answer:
-            "You can contact our customer support team through the 'Contact Us' page on our website. We are available via email, phone, and live chat. Our support hours are Monday to Friday, 9 AM to 5 PM.",
+            "ウェブサイトの「お問い合わせ」ページからカスタマーサポートにご連絡いただけます。メール、電話、ライブチャットで対応しており、営業時間は月曜から金曜の午前9時から午後5時です。",
         },
       ],
     },
     header: {
-      headline: "Your Ultimate App for Every Need",
+      headline: "あらゆるニーズに応える究極のアプリ",
       subtitle:
-        "Streamline your tasks, boost your productivity, and accomplish more every day. Unlock a world of possibilities with our cutting-edge mobile application.",
+        "タスクを効率化し、生産性を高め、毎日をより充実させましょう。最先端のモバイルアプリで可能性の世界を開きます。",
       screenshots: [
         "/screenshots/1.webp",
         "/screenshots/2.webp",
         "/screenshots/3.webp",
       ],
-      rewards: ["App of the year \n 1st", "Product of the day"],
-      usersDescription: "100+ people already using the app",
+      rewards: ["年間アプリ賞 \n 1位", "本日の製品"],
+      usersDescription: "すでに100人以上が利用中",
       headlineMark: [1, 3],
     },
     pricing: {
       id: "pricing",
-      title: "Pricing",
-      subtitle: "Flexible costs to meet your budget",
-      actionText: "Download the app",
+      title: "料金",
+      subtitle: "予算に合わせた柔軟な料金プラン",
+      actionText: "アプリをダウンロード",
       plans: [
         {
-          title: "Basic Plan",
-          price: "$9.99/month",
-          rows: ["Access to basic features", "Email support", "1 GB storage"],
+          title: "ベーシックプラン",
+          price: "月額9.99ドル",
+          rows: ["基本機能へのアクセス", "メールサポート", "1 GBのストレージ"],
         },
         {
-          title: "Standard Plan",
-          price: "$19.99/month",
+          title: "スタンダードプラン",
+          price: "月額19.99ドル",
           featured: true,
           rows: [
-            "Access to all basic features",
-            "Priority email support",
-            "10 GB storage",
-            "Monthly webinars",
+            "すべての基本機能へのアクセス",
+            "優先メールサポート",
+            "10 GBのストレージ",
+            "月次ウェビナー",
           ],
         },
         {
-          title: "Premium Plan",
-          price: "$29.99/month",
+          title: "プレミアムプラン",
+          price: "月額29.99ドル",
           rows: [
-            "Access to all features",
-            "24/7 support",
-            "100 GB storage",
-            "Weekly webinars",
-            "Exclusive content",
+            "すべての機能へのアクセス",
+            "24時間365日のサポート",
+            "100 GBのストレージ",
+            "週次ウェビナー",
+            "限定コンテンツ",
           ],
         },
       ],
@@ -256,217 +256,217 @@ const templateConfig: TemplateConfig = {
   },
   privacyPolicy: {
     seo: {
-      title: "Privacy Policy - Mobile App Landing Template",
-      description: "Privacy Policy",
+      title: "プライバシーポリシー - モバイルアプリランディングテンプレート",
+      description: "プライバシーポリシー",
     },
-    content: `# Privacy Policy
+    content: `# プライバシーポリシー
 
-**Effective Date:** [Insert Date]
+**施行日:** [日付を挿入]
 
-## Introduction
+## はじめに
 
-Welcome to [Your App Name] (the "App"). [Your Company Name] ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share your personal information when you use our App.
+[あなたのアプリ名]（以下「アプリ」）へようこそ。[あなたの会社名]（以下「当社」）は、お客様のプライバシー保護に努めています。本プライバシーポリシーは、アプリのご利用時に収集する個人情報の取り扱いについて説明します。
 
-## Information We Collect
+## 収集する情報
 
-### 1. Information You Provide
-- **Account Information:** When you sign up for our App, we may collect your name, email address, and other contact information.
-- **User Content:** We may collect any content you upload, post, or otherwise transmit through the App, including messages, photos, and other media.
+### 1. お客様から提供される情報
+- **アカウント情報:** アプリにサインアップする際に、お名前、メールアドレス、その他の連絡先情報を収集する場合があります。
+- **ユーザーコンテンツ:** メッセージ、写真、その他のメディアを含む、アプリを通じてアップロード、投稿、送信されるコンテンツを収集する場合があります。
 
-### 2. Information We Collect Automatically
-- **Usage Data:** We collect information about your interactions with the App, such as the features you use and the time spent on the App.
-- **Device Information:** We collect information about the device you use to access the App, including IP address, device type, and operating system.
+### 2. 自動的に収集される情報
+- **利用データ:** アプリの機能利用状況や利用時間などの情報を収集します。
+- **デバイス情報:** アプリにアクセスするデバイスのIPアドレス、デバイス種別、OSなどの情報を収集します。
 
-### 3. Information from Third Parties
-- **Third-Party Services:** If you connect to the App through a third-party service (e.g., social media), we may collect information from that service as permitted by their privacy policies.
+### 3. 第三者からの情報
+- **第三者サービス:** ソーシャルメディアなどの第三者サービスを通じてアプリに接続した場合、そのサービスのプライバシーポリシーに基づき情報を収集することがあります。
 
-## How We Use Your Information
+## 情報の利用目的
 
-We may use the information we collect for the following purposes:
-- **To Provide and Maintain Our Service:** We use your information to operate and improve the App.
-- **To Communicate with You:** We may use your contact information to send you updates, notifications, and other communications related to the App.
-- **To Personalize Your Experience:** We may use your information to personalize your experience with the App and to offer you content tailored to your interests.
-- **For Analytics and Research:** We use the information to analyze how our users interact with the App and to improve our services.
+収集した情報は以下の目的で利用します：
+- **サービスの提供および維持:** アプリの運営および改善のために利用します。
+- **コミュニケーション:** アプリに関する更新情報や通知を送信するために利用します。
+- **パーソナライズ:** お客様の興味に合わせたコンテンツ提供のために利用します。
+- **分析および調査:** ユーザーの利用状況を分析し、サービス向上に役立てます。
 
-## Sharing Your Information
+## 情報の共有
 
-We do not share your personal information with third parties except in the following circumstances:
-- **With Your Consent:** We may share your information with third parties if you give us explicit consent to do so.
-- **Service Providers:** We may share your information with third-party service providers who perform services on our behalf.
-- **Legal Requirements:** We may disclose your information if required by law, or if we believe that such action is necessary to comply with legal obligations, protect our rights, or prevent fraud.
+以下の場合を除き、個人情報を第三者と共有することはありません：
+- **お客様の同意:** 明示的な同意がある場合。
+- **サービス提供者:** 当社の代理でサービスを提供する第三者。
+- **法的要請:** 法令遵守や権利保護のために必要な場合。
 
-## Your Rights and Choices
+## お客様の権利と選択
 
-- **Access and Correction:** You have the right to access and correct the personal information we hold about you.
-- **Data Deletion:** You may request that we delete your personal information by contacting us at [Your Contact Information].
-- **Opt-Out:** You may opt out of receiving promotional communications from us by following the instructions in those communications.
+- **アクセスおよび訂正:** 保有する個人情報へのアクセスおよび訂正を求める権利があります。
+- **データ削除:** 個人情報の削除を希望する場合は、[連絡先情報]までご連絡ください。
+- **オプトアウト:** プロモーション通信の受信を停止することができます。
 
-## Security
+## セキュリティ
 
-We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. However, no security system is completely secure, and we cannot guarantee the absolute security of your information.
+不正アクセスや情報漏洩を防ぐため合理的な措置を講じていますが、完全な安全性を保証するものではありません。
 
-## Changes to This Privacy Policy
+## プライバシーポリシーの変更
 
-We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" above. Your continued use of the App after such changes signifies your acceptance of the revised Privacy Policy.
+本ポリシーは随時更新されることがあります。変更があった場合は本ページにて通知し、施行日を更新します。変更後もアプリを利用し続けることで、改訂版に同意したものとみなされます。
 
-## Contact Us
+## お問い合わせ
 
-If you have any questions or concerns about this Privacy Policy, please contact us at:
+本プライバシーポリシーに関するご質問は以下までご連絡ください：
 
-[Your Company Name]  
-[Your Contact Information]  
-[Email Address]  
-[Phone Number (optional)]
+[あなたの会社名]  
+[連絡先情報]  
+[メールアドレス]  
+[電話番号（任意）]
 
 `,
   },
   cookiesPolicy: {
     seo: {
-      title: "Cookies Policy - Mobile App Landing Template",
-      description: "Cookies Policy",
+      title: "クッキーポリシー - モバイルアプリランディングテンプレート",
+      description: "クッキーポリシー",
     },
-    content: `# Cookies Policy
+    content: `# クッキーポリシー
 
-**Effective Date:** [Insert Date]
+**施行日:** [日付を挿入]
 
-## Introduction
+## はじめに
 
-This Cookies Policy explains how [Your Company Name] ("we," "our," or "us") uses cookies and similar technologies to recognize you when you visit our app, [Your App Name] (the "App"). It explains what these technologies are and why we use them, as well as your rights to control their use.
+本クッキーポリシーは、[あなたの会社名]（以下「当社」）が、アプリ[あなたのアプリ名]（以下「アプリ」）の利用時にクッキーおよび類似技術を使用する方法と、その利用に関するお客様の権利について説明します。
 
-## What Are Cookies?
+## クッキーとは？
 
-Cookies are small data files that are placed on your device when you visit a website or use an app. Cookies are widely used by online service providers to facilitate and help to make the interaction between users and websites/apps faster and easier, as well as to provide reporting information.
+クッキーは、ウェブサイトやアプリを利用する際にデバイスに保存される小さなデータファイルです。オンラインサービス提供者は、ユーザーとウェブサイト/アプリ間のやり取りを円滑にし、報告情報を提供するためにクッキーを広く使用しています。
 
-### Types of Cookies We Use
+### 当社が使用するクッキーの種類
 
-We use the following types of cookies in our App:
+アプリでは以下の種類のクッキーを使用しています：
 
-1. **Strictly Necessary Cookies:**  
-   These cookies are essential for you to use some of the features of our App. Without these cookies, some services cannot be provided.
+1. **厳密に必要なクッキー:**  
+   アプリの一部機能を利用するために必須のクッキーです。これがないと一部サービスが提供できません。
 
-2. **Performance and Analytics Cookies:**  
-   These cookies collect information about how users interact with our App, including which pages are visited most often. We use this information to improve how our App works.
+2. **パフォーマンスおよび分析クッキー:**  
+   ユーザーのアプリ利用状況（よく訪れるページなど）を収集し、アプリの改善に役立てます。
 
-3. **Functionality Cookies:**  
-   These cookies allow our App to remember choices you make when you use the App, such as remembering your login details or language preference.
+3. **機能性クッキー:**  
+   ログイン情報や言語設定など、お客様の選択を記憶するためのクッキーです。
 
-4. **Targeting and Advertising Cookies:**  
-   These cookies are used to deliver advertisements that are relevant to you. They also limit the number of times you see an ad and help measure the effectiveness of advertising campaigns.
+4. **ターゲティングおよび広告クッキー:**  
+   関連性の高い広告を配信し、広告の表示回数を制限し、効果を測定します。
 
-### Cookies From Third Parties
+### 第三者のクッキー
 
-In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the App and to deliver advertisements on and through the App.
+当社のクッキーに加え、第三者のクッキーを使用してアプリの利用統計を報告し、広告を配信することがあります。
 
-## How We Use Cookies
+## クッキーの利用目的
 
-We use cookies to:
+クッキーは以下の目的で使用します：
 
-- **Remember your login details and preferences.**
-- **Analyze usage patterns and improve the functionality of our App.**
-- **Deliver relevant content and advertisements.**
-- **Understand your preferences based on previous or current App activity.**
+- **ログイン情報や設定の記憶**
+- **利用状況の分析と機能改善**
+- **関連コンテンツや広告の配信**
+- **過去および現在のアプリ利用に基づくお客様の好みの理解**
 
-## Your Choices Regarding Cookies
+## クッキーに関するお客様の選択
 
-You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by adjusting the settings in your browser. Most browsers allow you to:
+お客様はクッキーの受け入れまたは拒否を選択できます。ブラウザの設定で以下が可能です：
 
-- **View what cookies are stored on your device and delete them individually.**
-- **Block third-party cookies.**
-- **Block cookies from particular websites.**
-- **Block all cookies from being set.**
-- **Delete all cookies when you close your browser.**
+- **保存されているクッキーの確認と個別削除**
+- **第三者クッキーのブロック**
+- **特定サイトのクッキーのブロック**
+- **すべてのクッキーのブロック**
+- **ブラウザ終了時のクッキー削除**
 
-Please note that if you block or delete cookies, some features of the App may not function properly.
+クッキーをブロックまたは削除すると、一部機能が正常に動作しない場合があります。
 
-## Changes to This Cookies Policy
+## クッキーポリシーの変更
 
-We may update this Cookies Policy from time to time. We will notify you of any changes by posting the new Cookies Policy on this page and updating the "Effective Date" above. Your continued use of the App after such changes signifies your acceptance of the revised Cookies Policy.
+本ポリシーは随時更新されます。変更があった場合は本ページにて通知し、施行日を更新します。変更後もアプリを利用し続けることで、改訂版に同意したものとみなされます。
 
-## Contact Us
+## お問い合わせ
 
-If you have any questions or concerns about our use of cookies, please contact us at:
+クッキーの利用に関するご質問は以下までご連絡ください：
 
-[Your Company Name]  
-[Your Contact Information]  
-[Email Address]  
-[Phone Number (optional)]
+[あなたの会社名]  
+[連絡先情報]  
+[メールアドレス]  
+[電話番号（任意）]
 `,
   },
   termsAndConditions: {
     seo: {
-      title: "Terms and conditions - Mobile App Landing Template",
-      description: "Terms and conditions",
+      title: "利用規約 - モバイルアプリランディングテンプレート",
+      description: "利用規約",
     },
-    content: `# Terms and Conditions
+    content: `# 利用規約
 
-**Effective Date:** [Insert Date]
+**施行日:** [日付を挿入]
 
-## Introduction
+## はじめに
 
-Welcome to [Your App Name] (the "App"). These Terms and Conditions ("Terms") govern your use of the App provided by [Your Company Name] ("we," "our," or "us"). By accessing or using our App, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the App.
+[あなたのアプリ名]（以下「アプリ」）へようこそ。本利用規約（以下「規約」）は、[あなたの会社名]（以下「当社」）が提供するアプリの利用に関する条件を定めています。アプリにアクセスまたは利用することで、本規約に同意したものとみなされます。同意いただけない場合は、アプリの利用をお控えください。
 
-## Use of the App
+## アプリの利用
 
-### 1. Eligibility
-To use our App, you must be at least [Insert Age] years old and capable of entering into a legally binding agreement. By using the App, you represent and warrant that you meet these eligibility requirements.
+### 1. 利用資格
+アプリを利用するには、[年齢を挿入]歳以上で、法的に拘束力のある契約を締結できることが必要です。利用者はこれらの条件を満たしていることを表明し保証します。
 
-### 2. User Accounts
-- **Registration:** You may be required to create an account to access certain features of the App. You must provide accurate and complete information when creating your account.
-- **Account Security:** You are responsible for maintaining the confidentiality of your account login details and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.
-- **Account Termination:** We reserve the right to terminate or suspend your account at any time, without notice, for any reason, including if we believe you have violated these Terms.
+### 2. ユーザーアカウント
+- **登録:** アプリの特定機能を利用するためにアカウント作成が必要な場合があります。正確かつ完全な情報を提供してください。
+- **アカウントの安全:** アカウントのログイン情報の機密保持は利用者の責任です。不正利用が判明した場合は直ちに当社に通知してください。
+- **アカウントの停止:** 当社は、規約違反が疑われる場合など、通知なしにアカウントを停止または削除する権利を有します。
 
-### 3. Prohibited Conduct
-You agree not to:
-- Use the App for any illegal or unauthorized purpose.
-- Interfere with or disrupt the operation of the App or the servers or networks used to make the App available.
-- Upload or transmit any viruses, malware, or other harmful code.
-- Attempt to gain unauthorized access to any part of the App or to other accounts, systems, or networks connected to the App.
+### 3. 禁止行為
+利用者は以下の行為を行わないことに同意します：
+- 違法または無許可の目的でアプリを利用すること。
+- アプリやサーバー、ネットワークの運営を妨害すること。
+- ウイルスやマルウェアなど有害なコードをアップロードまたは送信すること。
+- 不正にアプリの一部や他のアカウント、システム、ネットワークにアクセスしようとすること。
 
-## Intellectual Property
+## 知的財産権
 
-### 1. Ownership
-All content and materials available on the App, including but not limited to text, graphics, logos, and software, are the property of [Your Company Name] or its licensors and are protected by intellectual property laws.
+### 1. 所有権
+アプリ内のすべてのコンテンツや素材（テキスト、グラフィック、ロゴ、ソフトウェアなど）は、当社またはライセンサーの所有物であり、知的財産法により保護されています。
 
-### 2. License
-We grant you a limited, non-exclusive, non-transferable license to access and use the App for your personal, non-commercial use. This license is subject to your compliance with these Terms.
+### 2. ライセンス
+当社は、利用者に対し、個人的かつ非商用の目的でアプリにアクセスし利用する限定的な非独占的、譲渡不可のライセンスを付与します。本ライセンスは規約遵守を条件とします。
 
-### 3. Restrictions
-You may not:
-- Reproduce, distribute, modify, or create derivative works of any content or materials on the App without our prior written consent.
-- Use any data mining, robots, or similar data gathering or extraction methods on the App.
+### 3. 制限事項
+利用者は以下の行為を行わないことに同意します：
+- 当社の事前書面同意なしに、コンテンツの複製、配布、改変、派生物の作成を行うこと。
+- データマイニング、ロボット、類似のデータ収集・抽出手法を使用すること。
 
-## Disclaimers and Limitation of Liability
+## 免責事項および責任制限
 
-### 1. Disclaimers
-The App is provided on an "as is" and "as available" basis. We make no warranties or representations about the accuracy or completeness of the content available on or through the App. We disclaim all warranties, whether express or implied, including any warranties of merchantability, fitness for a particular purpose, and non-infringement.
+### 1. 免責事項
+アプリは「現状有姿」かつ「利用可能な状態」で提供されます。内容の正確性や完全性について保証しません。商品性、特定目的適合性、非侵害の保証を含むすべての保証を否認します。
 
-### 2. Limitation of Liability
-To the fullest extent permitted by law, [Your Company Name] shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from:
-- Your use or inability to use the App;
-- Any unauthorized access to or use of our servers and/or any personal information stored therein;
-- Any bugs, viruses, or other harmful code that may be transmitted to or through the App;
-- Any errors or omissions in any content or for any loss or damage incurred as a result of your use of any content posted, emailed, transmitted, or otherwise made available through the App.
+### 2. 責任制限
+法の許す最大限の範囲で、当社は間接的、偶発的、特別、結果的、懲罰的損害や利益損失、データ損失、信用損失などについて一切責任を負いません。これには以下が含まれますが、これに限定されません：
+- アプリの利用または利用不能による損害
+- 不正アクセスや個人情報の漏洩
+- バグ、ウイルス、その他有害コードの送信
+- コンテンツの誤りや省略による損害
 
-## Indemnification
+## 免責
 
-You agree to indemnify, defend, and hold harmless [Your Company Name], its affiliates, and their respective officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including without limitation reasonable legal and accounting fees, arising out of or in any way connected with your access to or use of the App or your violation of these Terms.
+利用者は、当社および関連会社、役員、従業員、代理人を、利用者のアプリ利用または規約違反に起因する請求、責任、損害、損失、費用（合理的な法的・会計費用を含む）から免責し、防御し、損害を与えないことに同意します。
 
-## Governing Law
+## 準拠法
 
-These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law principles. You agree to submit to the exclusive jurisdiction of the courts located in [Your Jurisdiction] to resolve any legal matter arising from these Terms.
+本規約は[あなたの管轄区域]の法律に準拠し解釈されます。利用者は、本規約に関する紛争を[あなたの管轄区域]の裁判所の専属管轄に服することに同意します。
 
-## Changes to These Terms
+## 規約の変更
 
-We may update these Terms from time to time. We will notify you of any changes by posting the new Terms on this page and updating the "Effective Date" above. Your continued use of the App after such changes signifies your acceptance of the revised Terms.
+本規約は随時更新されます。変更があった場合は本ページにて通知し、施行日を更新します。変更後もアプリを利用し続けることで、改訂版に同意したものとみなされます。
 
-## Contact Us
+## お問い合わせ
 
-If you have any questions or concerns about these Terms, please contact us at:
+本規約に関するご質問は以下までご連絡ください：
 
-[Your Company Name]  
-[Your Contact Information]  
-[Email Address]  
-[Phone Number (optional)]
+[あなたの会社名]  
+[連絡先情報]  
+[メールアドレス]  
+[電話番号（任意）]
 `,
   },
 };

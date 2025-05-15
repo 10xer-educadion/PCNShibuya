@@ -91,7 +91,7 @@ function Footer() {
                 className="font-bold text-primary hover:text-primary/50 lg:whitespace-nowrap"
                 href="/terms-and-conditions"
               >
-                Terms & conditions
+                利用規約
               </motion.a>
             )}
             {legalLinks.privacyPolicy && (
@@ -104,7 +104,7 @@ function Footer() {
                 className="font-bold text-primary hover:text-primary/50 lg:whitespace-nowrap"
                 href="/privacy-policy"
               >
-                Privacy policy
+                プライバシーポリシー
               </motion.a>
             )}
             {legalLinks.cookiesPolicy && (
@@ -117,7 +117,7 @@ function Footer() {
                 className="font-bold text-primary hover:text-primary/50 lg:whitespace-nowrap"
                 href="/cookies-policy"
               >
-                Cookies policy
+                クッキーについて
               </motion.a>
             )}
           </div>
