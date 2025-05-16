@@ -1,0 +1,39 @@
+---
+import templateConfig from '../utils/config';
+import '../styles/styles.scss';
+
+const seo = {
+  title: '404 Not Found | PCN Shibuya',
+  description: 'お探しのページは見つかりませんでした。',
+};
+const logo = '/logo.svg';
+const theme = templateConfig.theme;
+---
+
+<!doctype html>
+<html lang="ja" data-theme={theme}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{seo.title}</title>
+    <meta name="description" content={seo.description} />
+    <meta name="robots" content="noindex" />
+    <script is:inline async src="https://www.google.com/recaptcha/api.js?render=6LeT1jwrAAAAADLOqH95Z3p5cxyHVecpMmYRx6ng&hl=ja"></script>
+  </head>
+
+  <body class="bg-white text-gray-900">
+    <main class="min-h-screen flex flex-col items-center justify-center p-8 text-center">
+      <img src={logo} alt="PCN渋谷" class="w-40 h-40 mt-8" />
+      <div class="px-6 py-3">
+        <div class="text-8xl font-bold text-primary">
+          404
+        </div>
+      </div>
+      <p class="text-lg mb-12">お探しのページは見つかりませんでした</p>
+      <a href="/" class="btn btn-primary px-6 py-3 text-white">
+        ホームに戻る
+      </a>
+    </main>
+  </body>
+</html>

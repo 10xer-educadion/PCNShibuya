@@ -1,13 +1,13 @@
+import type { TemplateConfig } from "../../utils/configType";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
-import AppBanner from "../../components/appBanner";
+import Contact from "./_components/contact";
 import { ConfigContext } from "../../utils/configContext";
-import type { TemplateConfig } from "../../utils/configType";
 import Header from "./_components/header";
 import Features from "./_components/features";
-import Partners from "./_components/partners";
+import SupportedBy from "./_components/supportedBy";
 import Faq from "./_components/faq";
-import HowItWorks from "./_components/howItWorks";
+import Flow from "./_components/flow";
 import Pricing from "./_components/pricing";
 import Testimonials from "./_components/testimonials";
 
@@ -21,13 +21,13 @@ function Home({ config }: Props) {
       <main>
         <Navbar />
         <Header />
-        <Partners />
+        <SupportedBy />
         <Features />
-        <HowItWorks />
+        <Flow />
         <Pricing />
         <Testimonials />
         <Faq />
-        <AppBanner />
+        <Contact />
         <Footer />
       </main>
     </ConfigContext.Provider>

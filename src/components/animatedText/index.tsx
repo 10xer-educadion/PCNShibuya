@@ -10,7 +10,7 @@ interface Props {
 function AnimatedText({ text, initial, whileInView }: Props) {
   let charIndex = 0;
   return text.split(" ").map((word, wordIndex) => (
-    <div key={wordIndex} className="inline-block whitespace-pre text-[2rem] sm:text-[2.5rem] md:text-[3rem]">
+    <div key={wordIndex} className="inline-block text-[2rem] sm:text-[2.5rem] md:text-[3rem]">
       {word.split("").map((char, index) => {
         charIndex++;
         return (

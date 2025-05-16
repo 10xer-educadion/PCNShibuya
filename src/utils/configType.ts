@@ -7,10 +7,6 @@ export type TemplateConfig = {
     logo: string;
     theme: string;
     backgroundGrid: boolean;
-    forceTheme: boolean;
-    showThemeSwitch: boolean;
-    googlePlayLink?: string | undefined;
-    appStoreLink?: string | undefined;
     termsAndConditions: {
         seo: {
             title: string;
@@ -25,13 +21,6 @@ export type TemplateConfig = {
         };
         content: string;
     };
-    cookiesPolicy: {
-        seo: {
-            title: string;
-            description: string;
-        };
-        content: string;
-    };
     footer: {
         links: {
             title: string;
@@ -40,16 +29,13 @@ export type TemplateConfig = {
         legalLinks: {
             termsAndConditions: boolean;
             privacyPolicy: boolean;
-            cookiesPolicy: boolean;
         };
         socials?: {
-            facebook?: string | undefined;
             instagram?: string | undefined;
             twitter?: string | undefined;
         } | undefined;
     };
     topNavbar: {
-        cta?: string | undefined;
         disableWidthAnimation?: boolean | undefined;
         links: {
             title: string;
@@ -58,12 +44,6 @@ export type TemplateConfig = {
         hideGooglePlay?: boolean | undefined;
         hideAppStore?: boolean | undefined;
     };
-    appBanner?: {
-        id?: string | undefined;
-        title: string;
-        subtitle: string;
-        screenshots: string[];
-    } | undefined;
     home: {
         seo: {
             title: string;
@@ -71,12 +51,12 @@ export type TemplateConfig = {
         };
         header: {
             id?: string | undefined;
+            hand: string;
             headline: string;
-            subtitle: string;
-            headlineMark?: number[] | undefined;
-            screenshots: string[];
-            rewards?: string[] | undefined;
-            usersDescription?: string | undefined;
+            place: string;
+            businessDays: {
+                [day: string]: string;
+            }[];
         };
         testimonials?: {
             id?: string | undefined;
@@ -87,7 +67,7 @@ export type TemplateConfig = {
                 comment: string;
             }[];
         } | undefined;
-        partners?: {
+        supportedBy?: {
             id?: string | undefined;
             title: string;
             logos: string[];
@@ -100,7 +80,7 @@ export type TemplateConfig = {
                 answer: string;
             }[];
         } | undefined;
-        howItWorks?: {
+        flow?: {
             id?: string | undefined;
             title: string;
             subtitle?: string | undefined;
@@ -126,11 +106,19 @@ export type TemplateConfig = {
             actionText?: string | undefined;
             subtitle?: string | undefined;
             plans?: {
-                featured?: boolean | undefined;
                 title: string;
                 price: string;
+                image: string;
                 rows: string[];
             }[] | undefined;
         } | undefined;
+        contact?: {
+            id?: string | undefined;
+            form: {
+                name: string;
+                email: string;
+                message: string;
+            };
+        } | undefined;  
     };
 }

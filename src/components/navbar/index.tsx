@@ -4,16 +4,12 @@ import clsx from "clsx";
 import { easeIn, motion, useScroll, useTransform } from "framer-motion";
 import { useContext, useState } from "react";
 import { ConfigContext } from "../../utils/configContext";
-import ThemeSwitcher from "./themeSwitcher";
 
 function Navbar() {
   const {
     name,
     logo,
-    showThemeSwitch,
     topNavbar,
-    googlePlayLink,
-    appStoreLink,
   } = useContext(ConfigContext)!;
 
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
@@ -59,7 +55,6 @@ function Navbar() {
           </a>
         </div>
         <div className="navbar-end md:hidden">
-          {showThemeSwitch && <ThemeSwitcher />}
           <MenuToggle
             toggle={() => setIsMobileNavVisible((current) => !current)}
             isOpen={isMobileNavVisible}
@@ -67,7 +62,6 @@ function Navbar() {
         </div>
         <div className="navbar-end hidden font-semibold md:flex">
           <ul className="flex gap-4 px-1 items-center">
-            {showThemeSwitch && <ThemeSwitcher />}
             {topNavbar.links.map(({ title, href }, index) => (
               <li key={index}>
                 <a
@@ -79,11 +73,6 @@ function Navbar() {
               </li>
             ))}
           </ul>
-          {topNavbar.cta && (
-            <a href="/app" className="ml-3 btn btn-primary btn-outline py-4">
-              {topNavbar.cta}
-            </a>
-          )}
         </div>
       </motion.div>
       <AnimatedList
@@ -104,28 +93,6 @@ function Navbar() {
             {title}
           </motion.a>
         ))}
-        <motion.ul
-          variants={{
-            show: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: "100%" },
-          }}
-          className="menu menu-horizontal justify-center py-0 px-1"
-        >
-          {googlePlayLink && (
-            <li className="mb-2">
-              <a href={googlePlayLink} target="_blank">
-                <img className="h-12" src="/stores/google-play.svg" />
-              </a>
-            </li>
-          )}
-          {appStoreLink && (
-            <li className="mb-2">
-              <a href={appStoreLink} target="_blank">
-                <img className="h-12" src="/stores/app-store.svg" />
-              </a>
-            </li>
-          )}
-        </motion.ul>
       </AnimatedList>
     </motion.nav>
   );

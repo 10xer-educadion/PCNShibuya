@@ -13,7 +13,7 @@ function Testimonials() {
   if (!testimonials) return null;
 
   return (
-    <section className="max-w-screen-lg mx-auto px-4 py-12">
+    <section className="relative z-0 mx-auto px-4 py-12">
       <div className="mb-6 max-w-none flex flex-col items-center prose prose-lg text-center">
         <h1 className="mb-0">
           <AnimatedText text={testimonials.title} />
@@ -38,27 +38,17 @@ function Testimonials() {
           modules={[Autoplay]}
           spaceBetween={32}
           breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 1 },
+            1024: { slidesPerView: 1 },
           }}
           slidesPerView={1}
         >
           {testimonials.cards.map(({ name, comment }, index) => (
-            <SwiperSlide className="!h-[22rem] my-2" key={index}>
-              <div className="h-full card shadow bg-primary">
-                <div className="p-6 card-body">
-                  <div className="flex mb-4">
-                    {Array(5)
-                      .fill(0)
-                      .map((_, index) => (
-                        <div
-                          key={index}
-                          className="h-6 w-6 mask mask-star-2 bg-primary-content"
-                        />
-                      ))}
-                  </div>
-                  <p className="text-primary-content/90">{comment}</p>
-                  <h2 className="card-title text-primary-content">{name}</h2>
+            <SwiperSlide className="!h-auto my-4" key={index}>
+              <div className="h-full card shadow bg-base-100 p-6 rounded-lg text-primary-content border-2 border-primary/30">
+                <div className="card-body">
+                  <h2 className="card-title mb-2">{name}</h2>
+                  <p className="whitespace-pre-wrap">{comment}</p>
                 </div>
               </div>
             </SwiperSlide>

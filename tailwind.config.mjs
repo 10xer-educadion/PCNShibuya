@@ -1,5 +1,4 @@
 import defaultTheme from "tailwindcss/defaultTheme";
-import config from "./src/utils/config";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -13,8 +12,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sketch: ["CabinSketch", ...defaultTheme.fontFamily.mono],
-        sans: ["Rowdies", ...defaultTheme.fontFamily.sans],
+        yusei: ["YuseiMagic-Regular", ...defaultTheme.fontFamily.sans],
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
@@ -33,6 +31,31 @@ export default {
   },
   plugins: [require("daisyui"), require("@tailwindcss/typography")],
   daisyui: {
-    themes: ["dark", config.theme],
+    defaultTheme: "pastelblue",
+    themes: [
+      {
+        pastelblue: {
+          primary: "#5a9bd4", // darker pastel blue
+          secondary: "#ffffff", // white
+          accent: "#7fb3d5",
+          neutral: "#e6f0fa",
+          "base-100": "#ffffff", // white background
+          info: "#93c5fd",
+          success: "#86efac",
+          warning: "#fde68a",
+          error: "#fca5a5",
+          "--rounded-box": "1rem",
+          "--rounded-btn": "0.5rem",
+          "--rounded-badge": "1.9rem",
+          "--animation-btn": "0.25s",
+          "--animation-input": "0.2s",
+          "--btn-text-case": "uppercase",
+          "--btn-focus-scale": "0.95",
+          "--border-btn": "1px",
+          "--tab-border": "1px",
+          "--tab-radius": "0.5rem",
+        },
+      },
+    ],
   },
 };

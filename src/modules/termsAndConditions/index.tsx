@@ -1,4 +1,4 @@
-import AppBanner from "@components/appBanner";
+import Contact from "@modules/home/_components/contact";
 import Footer from "@components/footer";
 import Navbar from "@components/navbar";
 import Markdown from "react-markdown";
@@ -19,7 +19,7 @@ function TermsAndConditionsPage({ config }: Props) {
         <section className="max-w-screen-lg mx-auto py-4 px-4 md:py-16">
           <Markdown className="prose">{termsAndConditions.content}</Markdown>
         </section>
-        <AppBanner />
+        <Contact />
         <Footer />
       </main>
     </ConfigContext.Provider>

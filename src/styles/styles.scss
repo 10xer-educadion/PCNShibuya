@@ -1,43 +1,39 @@
 @font-face {
-  font-family: "CabinSketch";
-  src: url("/fonts/CabinSketch.ttf") format("truetype");
+  font-family: "YuseiMagic-Regular";
+  src: url("/fonts/YuseiMagic-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Rowdies";
-  src: url("/fonts/Rowdies-Light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Rowdies";
-  src: url("/fonts/Rowdies-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
+
 html {
   scroll-behavior: smooth;
+  font-family: "YuseiMagic-Regular", sans-serif;
+  position: relative;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 8px 2px rgba(59, 130, 246, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 6px rgba(59, 130, 246, 1);
+  }
+}
+
+.glow-effect {
+  animation: glowPulse 2s infinite ease-in-out;
+  border-radius: 0.5rem;
 }
 .backgroundGrid {
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: -9;
+  z-index: -20;
   background-size: 50px 50px;
   background-image: linear-gradient(
       rgba(200, 200, 200, 0.1) 1px,
       transparent 1px
     ),
     linear-gradient(to right, rgba(200, 200, 200, 0.1) 1px, transparent 1px);
-}
-[data-theme="dark"] .backgroundGrid {
-  background-image: linear-gradient(
-      rgba(200, 200, 200, 0.03) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to right, rgba(200, 200, 200, 0.03) 1px, transparent 1px);
 }

@@ -16,7 +16,7 @@ function Faq() {
   return (
     <section id={faq.id} className="max-w-screen-lg mx-auto px-4 mb-12">
       <div className="flex flex-col md:flex-row">
-        <div className="relative flex-1 flex items-center">
+        <div className="flex-1 flex items-center">
           <NeonHexagon />
           <div className="h-full w-full flex items-center justify-center">
             <h3 className="text-center font-bold text-3xl flex flex-col items-center mb-8 md:mb-0 md:text-left">
@@ -39,7 +39,7 @@ function Faq() {
               }}
               transition={{ delay: 0.25 + index * 0.25 }}
               className={clsx(
-                "border-2 border-primary/30 my-2 collapse collapse-arrow",
+                "border-2 bg-white border-primary/30 my-2 collapse collapse-arrow",
                 {
                   "collapse-open": activeIndex === index,
                 }

@@ -1,27 +1,30 @@
+"use client"
+
 import AnimatedText from "../../../../components/animatedText";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
 
-const planImages = [
-  "/misc/wallet-front-color.webp",
-  "/misc/money-front-color.webp",
-  "/misc/locker-front-color.webp",
-];
-
-const planBGs = ["bg-primary/80", "bg-secondary/80", "bg-accent/80"];
-
 function Pricing() {
   const {
     home: { pricing },
   } = useContext(ConfigContext)!;
+  
   if (!pricing) return null;
+
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section
       id={pricing.id}
-      className="overflow-hidden max-w-screen-lg mx-auto px-4 py-12"
+      className="overflow-hidden max-w-screen-lg mx-auto px-4 py-16"
     >
       <div className="mb-12 max-w-none flex flex-col items-center prose prose-lg text-center">
         <h1 className="mb-0">
@@ -52,56 +55,63 @@ function Pricing() {
               visible: { x: 0, opacity: 1 },
             }}
           >
-            {plan.featured && (
-              <div className="absolute top-0 bottom-1 right-1 left-0 bg-secondary -z-10 rounded-[var(--rounded-box)]" />
-            )}
             <div
-              className={clsx(
-                "border-2 border-primary/10 flex-1 card p-0 shadow-md bg-base-100 z-10 overflow-hidden",
-                {
-                  "-translate-x-3 -translate-y-3 transition-transform hover:translate-x-0 hover:translate-y-0":
-                    plan.featured,
-                }
-              )}
-            >
+              className="border-2 border-primary/30 flex-1 card shadow-md bg-base-100 overflow-hidden">
               <div className="card-body p-0 text-center">
-                <div className="flex relative">
-                  {plan.featured && (
-                    <div className="rounded-none badge badge-info top-0 right-0 absolute">
-                      Best Price
-                    </div>
-                  )}
-                  <div className={clsx("h-32 w-[40%] p-4", planBGs[index])}>
+                <div className="relative">
+                  <div className={clsx("p-4 pt-4 bg-primary/10")}>
                     <img
-                      src={planImages[index]}
+                      src={plan.image}
                       alt="pricing plan"
-                      className="m-0 h-full w-full object-contain"
+                      className="m-0 h-16 w-auto object-contain mx-auto"
                     />
                   </div>
-                  <div className="mt-8 flex-1 font-bold">
-                    <h4 className="text-xl my-1">{plan.title}</h4>
-                    <p className="my-1">{plan.price}</p>
+                </div>
+                
+                <div className="px-6 pt-4">
+                  <h3 className="text-xl font-bold">{plan.title}</h3>
+                </div>
+                
+                <div className="px-6 py-3">
+                  <div className="text-3xl font-bold text-primary">
+                    <span className="text-4xl">{plan.price}</span>
                   </div>
                 </div>
-                <div className="w-full flex-1 flex flex-col mb-4">
-                  {plan.rows.map((row, index) => (
-                    <div key={index} className="flex relative items-center">
-                      <span className="relative flex h-3 w-3 mx-6">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
-                      </span>
-                      <p className="flex-1 text-left my-2">{row}</p>
-                    </div>
-                  ))}
+                
+                <div className="w-full flex-1 flex flex-col px-6 mb-4">
+                  {plan.rows.map((row, rowIndex) => {   
+                    const highlightRow = rowIndex === 0;       
+                    return (
+                      <div 
+                        key={rowIndex} 
+                        className={clsx(
+                          "flex relative items-start py-2",
+                          highlightRow ? "" : "text-black/70"
+                        )}
+                      >
+                        <span className={clsx(
+                          "relative flex h-3 w-3 mt-1.5 mr-3",
+                          highlightRow  ? "" : "opacity-50"
+                        )}>
+                          {highlightRow  && (
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                          )}
+                          <span className={`relative inline-flex rounded-full h-3 w-3 ${highlightRow ? 'bg-primary' : 'bg-black/50'}`}></span>
+                        </span>
+                        <p className="flex-1 text-left my-0">{row}</p>
+                      </div>
+                    );
+                  })}
                 </div>
+                
                 {pricing.actionText && (
-                  <div className="w-full">
-                    <a
-                      href="/app"
-                      className="btn btn-primary btn-square no-animation rounded-none w-full text-lg h-auto py-4"
+                  <div className="w-full mt-auto p-4">
+                    <button
+                      onClick={scrollToContact}
+                      className="btn btn-primary text-white w-full text-lg h-auto py-4"
                     >
                       {pricing.actionText}
-                    </a>
+                    </button>
                   </div>
                 )}
               </div>

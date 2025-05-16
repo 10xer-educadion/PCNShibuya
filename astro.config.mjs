@@ -1,9 +1,12 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://10xer.education/pcn_shibuya/',
+  outDir: "./dist/pcn_shibuya",
   vite: {
     css: {
       preprocessorOptions: {
@@ -13,5 +16,9 @@ export default defineConfig({
       },
     },
   },
-  integrations: [react(), tailwind()],
+  integrations: [
+    react(),
+    tailwind(),
+    sitemap(),
+  ],
 });
