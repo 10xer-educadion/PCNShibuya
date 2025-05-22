@@ -1,14 +1,14 @@
 @font-face {
-  font-family: "YuseiMagic-Regular";
-  src: url("/fonts/YuseiMagic-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
   font-display: swap;
+  font-family: 'YuseiMagic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/yusei-magic-v15-japanese-regular.woff2') format('woff2');
 }
 
 html {
   scroll-behavior: smooth;
-  font-family: "YuseiMagic-Regular", sans-serif;
+  font-family: "YuseiMagic", sans-serif;
   position: relative;
 }
 

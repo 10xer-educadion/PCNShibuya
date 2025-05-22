@@ -16,7 +16,7 @@ const Path = (props: SVGMotionProps<SVGElement>) => (
 );
 
 const MenuToggle = ({ toggle, isOpen }: Props) => (
-  <button onClick={toggle}>
+  <button aria-label="メニューの切り替え" onClick={toggle}>
     <motion.svg
       initial={false}
       animate={isOpen ? "open" : "closed"}

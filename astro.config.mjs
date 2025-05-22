@@ -5,8 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://10xer.education/pcn_shibuya/',
-  outDir: "./dist/pcn_shibuya",
+  site: 'https://pcn.naranchu.jp/',
   vite: {
     css: {
       preprocessorOptions: {
@@ -14,6 +13,10 @@ export default defineConfig({
           api: "modern-compiler",
         },
       },
+    },
+    build: {
+      target: 'es2020',
+      minify: 'esbuild',
     },
   },
   integrations: [

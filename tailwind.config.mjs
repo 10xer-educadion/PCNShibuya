@@ -12,7 +12,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        yusei: ["YuseiMagic-Regular", ...defaultTheme.fontFamily.sans],
+        yusei: ["YuseiMagic", ...defaultTheme.fontFamily.sans],
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",

@@ -15,8 +15,8 @@ const templateConfig: TemplateConfig = {
       privacyPolicy: true,
     },
     socials: {
-      instagram: "https://instagram.com/pcn.shibuya",
-      twitter: "https://x.com/PCN_Shibuya",
+      instagram: "https://instagram.com/pcnshibuya",
+      twitter: "https://x.com/pcnshibuya",
     },
     links: [
       { href: "/#features", title: "特徴" },
@@ -90,7 +90,7 @@ const templateConfig: TemplateConfig = {
       id: "flow",
       title: "ご利用までの流れ",
       subtitle:
-        "入会金は不要です。無料体験後、システムへの登録ですぐに通うことができます！",
+        "入会金は不要です。無料体験後、システムへの登録ですぐに通うことができます！まずはお問い合わせください。",
       steps: [
         {
           title: "会員登録",

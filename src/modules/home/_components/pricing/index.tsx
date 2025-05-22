@@ -63,13 +63,14 @@ function Pricing() {
                     <img
                       src={plan.image}
                       alt="pricing plan"
+                      loading="lazy"
                       className="m-0 h-16 w-auto object-contain mx-auto"
                     />
                   </div>
                 </div>
                 
                 <div className="px-6 pt-4">
-                  <h3 className="text-xl font-bold">{plan.title}</h3>
+                  <div className="text-xl font-bold">{plan.title}</div>
                 </div>
                 
                 <div className="px-6 py-3">

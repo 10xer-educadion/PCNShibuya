@@ -37,6 +37,7 @@ function Footer() {
           <div className="flex items-center gap-3 w-full text-primary">
             {socials?.instagram && (
               <motion.a
+                aria-label="Instagram"
                 variants={{
                   hidden: { opacity: 0, x: "-100%" },
                   visible: { opacity: 1, x: 0 },
@@ -51,6 +52,7 @@ function Footer() {
             )}
             {socials?.twitter && (
               <motion.a
+                aria-label="X (旧Twitter)"
                 variants={{
                   hidden: { opacity: 0, x: "-100%" },
                   visible: { opacity: 1, x: 0 },

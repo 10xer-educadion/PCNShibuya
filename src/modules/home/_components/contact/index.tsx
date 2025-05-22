@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ConfigContext } from "../../../../utils/configContext";
 import AnimatedText from "../../../../components/animatedText";
 
-const reCAPTCHASiteKey = "6LeT1jwrAAAAADLOqH95Z3p5cxyHVecpMmYRx6ng";
+const reCAPTCHASiteKey = "6Lf_DkQrAAAAAL0SpMEwLJ98ag4xqb2t1pv_sIUV";
 const ssgFormURL = "https://ssgform.com/s/em8Uz7K8Yx7Q";
 
 declare global {
