@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { ConfigContext } from "../../utils/configContext";
 import InstagramLogo from "./svgs/instagram";
 import TwitterLogo from "./svgs/twitter";
+import LineLogo from "./svgs/line";
 import { motion } from "framer-motion";
 
 function Footer() {
@@ -63,6 +64,21 @@ function Footer() {
                 href={socials.twitter}
               >
                 <TwitterLogo />
+              </motion.a>
+            )}
+            {socials?.line && (
+              <motion.a
+                aria-label="LINE"
+                variants={{
+                  hidden: { opacity: 0, x: "-100%" },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                transition={{ delay: 1 }}
+                className="w-8 h-8 hover:text-primary/50"
+                target="_blank"
+                href={socials.line}
+              >
+                <LineLogo />
               </motion.a>
             )}
           </div>

@@ -33,6 +33,7 @@ export type TemplateConfig = {
         socials?: {
             instagram?: string | undefined;
             twitter?: string | undefined;
+            line?: string | undefined;
         } | undefined;
     };
     topNavbar: {

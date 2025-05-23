@@ -1,12 +1,10 @@
-"use client";
+import { useState, useContext, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import { ConfigContext } from '../../../../utils/configContext';
+import AnimatedText from '../../../../components/animatedText';
 
-import { useState, useContext, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { ConfigContext } from "../../../../utils/configContext";
-import AnimatedText from "../../../../components/animatedText";
-
-const reCAPTCHASiteKey = "6Lf_DkQrAAAAAL0SpMEwLJ98ag4xqb2t1pv_sIUV";
-const ssgFormURL = "https://ssgform.com/s/em8Uz7K8Yx7Q";
+const reCAPTCHASiteKey = '6Lf_DkQrAAAAAL0SpMEwLJ98ag4xqb2t1pv_sIUV';
+const ssgFormURL = 'https://ssgform.com/s/em8Uz7K8Yx7Q';
 
 declare global {
   interface Window {
@@ -24,9 +22,9 @@ function Contact() {
   if (!contact) return null;
 
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
 
   const formRef = useRef<HTMLFormElement>(null);
@@ -35,8 +33,19 @@ function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
+    const existingScript = document.querySelector('script[src^="https://www.google.com/recaptcha/api.js"]');
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.src = `https://www.google.com/recaptcha/api.js?render=${reCAPTCHASiteKey}`;
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
+  useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
-    if (searchParams.get("success") === "true") {
+    if (searchParams.get('success') === 'true') {
       setSubmitted(true);
     }
   }, []);
@@ -55,13 +64,11 @@ function Contact() {
       if (tokenRef.current) {
         tokenRef.current.value = token;
       }
-      console.log("reCAPTCHAトークン:", token);
-      console.log("フォームデータ:", formRef.current);
       if(formRef.current?.reportValidity()) {
         formRef.current?.submit();
       }
     } catch (error: any) {
-      console.error("reCAPTCHAエラーまたはフォーム送信エラー:", error);
+      console.error('送信エラー:');
     } finally {
       setIsSubmitting(false);
     }

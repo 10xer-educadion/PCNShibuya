@@ -12,7 +12,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        yusei: ["YuseiMagic", ...defaultTheme.fontFamily.sans],
+        yusei: ["YuseiMagic"],
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
@@ -35,11 +35,11 @@ export default {
     themes: [
       {
         pastelblue: {
-          primary: "#5a9bd4", // darker pastel blue
-          secondary: "#ffffff", // white
+          primary: "#5a9bd4",
+          secondary: "#ffffff",
           accent: "#7fb3d5",
           neutral: "#e6f0fa",
-          "base-100": "#ffffff", // white background
+          "base-100": "#ffffff",
           info: "#93c5fd",
           success: "#86efac",
           warning: "#fde68a",

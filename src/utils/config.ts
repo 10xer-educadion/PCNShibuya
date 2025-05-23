@@ -17,6 +17,7 @@ const templateConfig: TemplateConfig = {
     socials: {
       instagram: "https://instagram.com/pcnshibuya",
       twitter: "https://x.com/pcnshibuya",
+      line: "https://lin.ee/Qmu3Wnx",
     },
     links: [
       { href: "/#features", title: "特徴" },

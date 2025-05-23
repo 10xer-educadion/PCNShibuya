@@ -5,5 +5,5 @@ import defaultTemplateConfig from "utils/config"
 ---
 
 <Layout {...defaultTemplateConfig}>
-  <HomePage client:load config={defaultTemplateConfig} />
+  <HomePage client:only="react" config={defaultTemplateConfig} />
 </Layout>

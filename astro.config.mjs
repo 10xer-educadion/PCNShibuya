@@ -6,6 +6,9 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://pcn.naranchu.jp/',
+  build: {
+    inlineStyles: true,
+  },
   vite: {
     css: {
       preprocessorOptions: {

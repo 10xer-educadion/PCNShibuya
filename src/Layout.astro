@@ -5,7 +5,6 @@ import type { TemplateConfig } from "utils/configType";
 
 const { backgroundGrid, seo, logo, theme } =
   Astro.props as TemplateConfig;
-const reCAPTCHASiteKey = "6Lf_DkQrAAAAAL0SpMEwLJ98ag4xqb2t1pv_sIUV";
 ---
 
 <!doctype html>
@@ -24,7 +23,6 @@ const reCAPTCHASiteKey = "6Lf_DkQrAAAAAL0SpMEwLJ98ag4xqb2t1pv_sIUV";
     <meta property="twitter:title" content={seo.title} />
     <meta property="twitter:description" content={seo.description} />
     <meta property="twitter:image" content={new URL(logo, Astro.url)} />
-    <script defer is:inline async src=`https://www.google.com/recaptcha/api.js?render=${reCAPTCHASiteKey}&hl=ja`></script>
   </head>
   <body>
     {backgroundGrid && <div class="backgroundGrid" />}
